@@ -4,658 +4,277 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thyssen Glass</title>
+    <title>Landing Page</title>
     <link rel="icon" type="image/x-icon" href="/img/thyfavicon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/css/slick-theme.css">
-    <link rel="stylesheet" href="/css/slick.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/style.css">
     <script src="https://kit.fontawesome.com/60363fc8c5.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 </head>
 
 <body>
 
-    <header>
-        <div class="container">
-            <div class="head-section">
-                <div class="logo-side">
-                    <div class="logo"><a href="/"><img src="/img/thywhitelogo.png" alt="logo"></a>
-                    </div>
-                    <ul class="languages">
-                        <li><a href="#" class=""><i class="fa-brands fa-telegram"></i></a></li>
-                        <li><a href="#" class=""><i class="fa-brands fa-whatsapp"></i></a></li>
-                        <li><a href="#" class=""><i class="fa-solid fa-phone"></i></a></li>
-                    </ul>
-                </div>
-                <div class="mobile_btn">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+    <header class="py-4">
+        <div class="container-fluid">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="logo">
+                    <img src="/img/Union_6.svg" alt="logo">
                 </div>
                 <nav>
-                    <div class="logo navlogo"><a href="/"><img src="/img/thywhitelogo.png" alt="logo"></a></div>
-                    <ul class="head-navlinks">
-                        <li><a href="/about/">О нас</a></li>
-
-                        <li class="open">
-                            <a href="/services/">Услуги</a>
-                            <ul class="dropdown-nav">
-                                <li><a href="#">Установка</a></li>
-                                <li><a href="#">Распродажа</a></li>
-                                <li><a href="#">Доставка</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a href="/products/">Продукция</a>
-                        </li>
-                        <li><a href="#">Стать дилером</a></li>
-                        <li><a href="/projects/">Проекты</a></li>
-                        <!-- <li><a href="/blogs/">Bloq</a></li> -->
-                        <li><a href="/contact/">Контакт</a></li>
-                        <li><a href="#" class="price-offer" data-bs-toggle="modal" data-bs-target="#exampleModalLong">
-                                <span>Запросить цену</span>
-                            </a></li>
+                    <ul class="d-flex gap-3">
+                        <li><a href="#">Lorem, ipsum.</a></li>
+                        <li><a href="#">Lorem, ipsum dolor.</a></li>
+                        <li><a href="#">Lorem, ipsum.</a></li>
+                        <li><a href="#">Lorem</a></li>
+                        <li><a href="#">Lorem</a></li>
                     </ul>
-                    <div class="socials">
-                        <div class="social-icon contact-yt">
-                            <a href="#" target="_blank">
-                                <i class="fa-solid fa-phone"></i>
-                            </a>
-                        </div>
-                        <div class="social-icon contact-fb">
-                            <a href="#" target="_blank">
-                                <i class="fa-brands fa-telegram"></i>
-                            </a>
-                        </div>
-                        <div class="social-icon contact-ig">
-                            <a href="#" target="_blank">
-                                <i class="fa-regular fa-envelope"></i>
-                            </a>
-                        </div>
-                        <div class="social-icon contact-tw">
-                            <a href="#" target="_blank">
-                                <img src="/img/whatsapp.png" alt="youtube">
-                            </a>
-                        </div>
-                    </div>
                 </nav>
+                <div class="header_right">
+                    <div class="socials">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0"
+                                        viewBox="0 0 682.667 682.667" style="enable-background:new 0 0 512 512"
+                                        xml:space="preserve" class="">
+                                        <g>
+                                            <defs>
+                                                <clipPath id="a" clipPathUnits="userSpaceOnUse">
+                                                    <path d="M0 512h512V0H0Z" fill="#000000" opacity="1"
+                                                        data-original="#000000"></path>
+                                                </clipPath>
+                                            </defs>
+                                            <g clip-path="url(#a)" transform="matrix(1.33333 0 0 -1.33333 0 682.667)">
+                                                <path
+                                                    d="m0 0-433.385-165.437c-21.983-8.391-21.621-21.09.801-28.223l97.365-27.86 51.179-146.354c7.766-22.211 28.282-27.341 45.59-11.406l65.114 59.952 91.502-73.681c18.594-14.42 37.625-7.349 42.295 15.709l71.01 350.63C36.141-3.612 21.98 8.388 0 0Z"
+                                                    style="stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                    transform="translate(464.639 454.906)" fill="none" stroke="#000000"
+                                                    stroke-width="30" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity=""
+                                                    data-original="#000000" class=""></path>
+                                                <path d="m0 0 260.809 133.243L93.535-44.497l-29.594-119.86"
+                                                    style="stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                    transform="translate(130.728 234.059)" fill="none" stroke="#000000"
+                                                    stroke-width="30" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity=""
+                                                    data-original="#000000" class=""></path>
+                                                <path d="m0 0 156.959-126.387"
+                                                    style="stroke-width:30;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;stroke-dasharray:none;stroke-opacity:1"
+                                                    transform="translate(225.052 188.92)" fill="none" stroke="#000000"
+                                                    stroke-width="30" stroke-linecap="round" stroke-linejoin="round"
+                                                    stroke-miterlimit="10" stroke-dasharray="none" stroke-opacity=""
+                                                    data-original="#000000" class=""></path>
+                                            </g>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+                                        xmlns:xlink="http://www.w3.org/1999/xlink" width="512" height="512" x="0" y="0"
+                                        viewBox="0 0 682 682.667" style="enable-background:new 0 0 512 512"
+                                        xml:space="preserve" class="">
+                                        <g>
+                                            <path fill-rule="evenodd"
+                                                d="M544.387 93.008C484.512 33.063 404.883.035 320.05 0 145.246 0 2.98 142.262 2.91 317.113c-.024 55.895 14.577 110.457 42.331 158.551L.25 640l168.121-44.102c46.324 25.27 98.477 38.586 151.55 38.602h.134c174.785 0 317.066-142.273 317.132-317.133.036-84.742-32.921-164.418-92.8-224.36zM320.05 580.94h-.11c-47.296-.02-93.683-12.73-134.16-36.742l-9.62-5.715-99.766 26.172 26.628-97.27-6.27-9.972c-26.386-41.969-40.32-90.476-40.296-140.281.055-145.332 118.305-263.57 263.7-263.57 70.406.023 136.59 27.476 186.355 77.3s77.156 116.051 77.133 186.485C583.582 462.69 465.34 580.94 320.05 580.94zm144.586-197.418c-7.922-3.968-46.883-23.132-54.149-25.78-7.258-2.645-12.547-3.962-17.824 3.968-5.285 7.93-20.469 25.781-25.094 31.066-4.625 5.29-9.242 5.953-17.168 1.985-7.925-3.965-33.457-12.336-63.726-39.332-23.555-21.012-39.457-46.961-44.082-54.89-4.617-7.938-.04-11.813 3.476-16.173 8.578-10.652 17.168-21.82 19.809-27.105 2.644-5.29 1.32-9.918-.664-13.883-1.977-3.965-17.824-42.969-24.426-58.84-6.437-15.445-12.965-13.36-17.832-13.601-4.617-.231-9.902-.278-15.187-.278-5.282 0-13.868 1.98-21.133 9.918-7.262 7.934-27.73 27.102-27.73 66.106s28.394 76.683 32.355 81.972c3.96 5.29 55.879 85.328 135.367 119.649 18.906 8.172 33.664 13.043 45.176 16.695 18.984 6.031 36.254 5.18 49.91 3.14 15.226-2.277 46.879-19.171 53.488-37.68 6.602-18.51 6.602-34.374 4.617-37.683-1.976-3.304-7.261-5.285-15.183-9.254zm0 0"
+                                                fill="#000000" opacity="1" data-original="#000000" class=""></path>
+                                        </g>
+                                    </svg>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="themebtn" href="#">
+                                    Оставить заявку
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="head-slider">
-            <div class="sliderSlick">
-                <div class="box-part" data-slick-index="0" aria-hidden="true" tabindex="-1">
-                    <div class="box " style="background-image: url('/img/glassslider1.jpg');">
+        <section id="slider">
+            <div class="container-fluid">
+                <div class="slider_both">
+                    <img src="/img/sliderremove2.png" alt="sliderphoto" class="sliderphoto">
+                    <div class="slider_left content">
+                        <h2 class="d-flex flex-column from-left">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="52" height="40" viewBox="0 0 52 40"
+                                fill="none">
+                                <path d="M1.87525 7.59673C1.87525 13.0435 2.35404 18.6933 1.52441 24.0859"
+                                    stroke="#075E54" stroke-width="2" stroke-linecap="round"></path>
+                                <path
+                                    d="M34.152 1.28227C31.7133 7.78555 27.407 13.9764 24.0168 20.0324C22.5231 22.7006 21.1125 25.4024 19.417 27.9456"
+                                    stroke="#075E54" stroke-width="2" stroke-linecap="round"></path>
+                                <path d="M29.9424 38.1202C36.9633 37.044 44.0515 35.1429 50.6416 32.5069"
+                                    stroke="#075E54" stroke-width="2" stroke-linecap="round"></path>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="417" height="13" viewBox="0 0 417 13"
+                                fill="none">
+                                <path
+                                    d="M1.42578 6.40874C12.3598 6.2364 23.1869 4.74766 34.0961 4.41636C38.8548 4.27185 46.8981 3.02538 51.1837 5.3673C53.4277 6.59356 49.1384 9.54845 48.2357 10.2649C47.4571 10.8829 47.0104 11.2909 48.4008 11.3724C53.1123 11.6486 57.978 11.0909 62.6286 10.5492C79.4261 8.59266 96.4462 6.84016 113.111 4.15441C113.573 4.07994 121.732 1.97129 121.574 3.6722C121.235 7.30526 112.383 7.29368 121.697 7.32276C138.728 7.37593 155.113 4.79899 171.938 2.75232C176.988 2.13796 182.01 1.65455 187.111 1.60291C187.824 1.59569 190.228 1.26997 191.021 1.67496C192.157 2.25568 183.145 5.16378 182.21 5.62675C181.551 5.95347 179.814 6.64182 179.811 7.50419C179.807 8.69069 183.712 7.57134 184.362 7.54831C188.365 7.40635 192.296 7.94816 196.258 8.36336C205.378 9.31899 214.28 9.11614 223.362 7.93934C233.526 6.62232 242.45 4.24571 252.773 3.87701M252.577 3.85764C262.673 3.46753 272.982 3.17725 283.079 3.70675C284.575 3.7852 287.219 3.44787 287.154 5.23132C287.114 6.35642 285.846 6.53181 285.444 7.441C285.155 8.09612 286.952 8.03082 287.126 8.02637C292.214 7.89659 297.381 7.35884 302.435 6.83289L302.499 6.82622C313.888 5.641 325.035 3.65414 336.323 1.93923C336.716 1.87961 343.331 0.967905 339.848 2.30182C338.354 2.8739 328.171 6.07654 333.533 7.43291C339.532 8.95031 346.273 7.40974 352.214 6.36614C359.469 5.09163 366.688 3.49229 374.013 2.54912C374.712 2.45911 381.041 2.19421 377.496 3.42139C376.39 3.80434 373.628 4.20318 372.797 4.93614C372.479 5.21628 374.492 5.18589 374.579 5.18782C379.801 5.30274 384.944 5.70721 390.186 5.37717L390.334 5.36783C397.049 4.94507 403.696 4.52654 410.392 3.91084C411.354 3.8224 415.712 4.3098 416.217 3.41921"
+                                    stroke="#075E54" stroke-width="1.5" stroke-linecap="round"></path>
+                            </svg>
+                            Подбираем эффективных сотрудников
+                        </h2>
+                        <p>которые приносят прибыль, а не проблемы.</p>
+                        <a class="themebtn" href="#">Оставить заявку</a>
                     </div>
-                    <div class="slide-txt">
-                        <div class="container">
-                            <h2>THYSSEN</h2>
-                            <h2>
-                                Пространство <br> без границ</h2>
-                        </div>
-                    </div>
-                    <div class="white-side"></div>
-                </div>
-                <div class="box-part" data-slick-index="1" aria-hidden="true" tabindex="-1">
-                    <div class="box " style="background-image: url('/img/glassslider1.jpg');">
-                    </div>
-                    <div class="slide-txt">
-                        <div class="container">
-                            <h2>THYSSEN
-                            </h2>
-                            <h2>
-                                Современное остекление <br> для вашего комфорта</h2>
-                        </div>
-                    </div>
-                    <div class="white-side"></div>
-                </div>
-                <div class="box-part" data-slick-index="2" aria-hidden="false" tabindex="0">
-                    <div class="box" style="background-image: url('/img/glassslider1.jpg');">
-                    </div>
-                    <div class="slide-txt">
-                        <div class="container">
-                            <h2>
-                                THYSSEN</h2>
-                            <h2>
-                                Эстетика и защита <br> в каждой панели</h2>
-                        </div>
-                    </div>
-                    <div class="white-side"></div>
-                </div>
-            </div>
-            <div class="slider-nav">
-                <div class="container">
-                    <button class="slick-prev slick-arrow" aria-label="Previous">
-                        <span></span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.68 12" fill="#2e3134"
-                            width="17" height="12">
-                            <path d="M14.68,5.19H1V6.82H14.68Z"></path>
-                            <path d="M7.15,1.15,6,0,0,6,1.15,7.15Z"></path>
-                            <path d="M7.15,10.85l-6-6L0,6l6,6Z"></path>
-                        </svg></button>
-                    <button class="slick-next slick-arrow" aria-label="Next"><svg xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 18 14.72" fill="#2e3134" width="17" height="12">
-                            <path d="M0 6.36H16.72V8.36H0z"></path>
-                            <path transform="rotate(-45 13.615 4.38)" d="M12.62 -0.82H14.61V9.59H12.62z"></path>
-                            <path transform="rotate(-45 13.61 10.333)" d="M8.41 9.34H18.82V11.33H8.41z"></path>
-                        </svg></button>
-                </div>
-            </div>
-        </section>
-        <section class="advantages">
-            <div class="container">
-                <div class="advantage-top" align="center">
-                    <div class="container">
-                        <div class="advantage-text">
-                            <span><strong>THYSSEN</strong>
-                                Мы предлагаем надёжные безрамные системы, идеально подходящие для любых погодных
-                                условий. Используем только качественные материалы и фурнитуру премиум-класса. Установка
-                                выполняется профессионально и точно в срок — без лишних хлопот для вас. </span>
-                        </div>
-                    </div>
-                </div>
-                <div class="advantage-bottom">
-                    <div class="row advantage-row">
-                        <div class="col-lg-2 col-md-6 col-sm-12 col7">
-                            <div class="advantage-box">
-                                <div class="advantage-box-content">
-                                    <i class="fa-solid fa-house-chimney-window"></i>
-                                    <span>Панорамный <br> вид</span>
+                    <div class="slider_right">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="825" height="420" viewBox="0 0 825 420"
+                            fill="none">
+                            <path
+                                d="M50.2354 165.542C64.929 152.215 82.3798 141.336 98.8886 130.435C119.933 116.54 141.999 102.383 165.858 93.802C185.659 86.6806 206.939 78.1206 227.677 74.3407C246.762 70.8621 267.288 70.5867 286.633 69.7616C357.294 66.7476 429.569 99.7557 472.279 156.574C511.344 208.545 504.954 278.192 473.042 331.917C455.022 362.255 419.751 375.391 383.061 367.531C363.993 361.015 354.157 358.113 342.536 341.457V341.457C330.9 324.777 326.206 304.894 327.777 284.617C328.519 275.03 330.429 264.569 334.313 254.437C339.116 245.302 343.926 237.592 350.168 229.268C358.812 217.744 369.39 207.757 379.551 197.596C400.398 176.749 420.045 155.211 446.712 141.501C477.406 125.72 507.937 115.942 541.538 108.493C593.199 97.0414 646.248 94.1435 697.801 81.9726C719.212 76.9178 743.096 71.3355 762.099 59.4586C766.545 56.68 770.468 53.1401 774.883 50.4911"
+                                stroke="url(#paint0_linear_237_14)" stroke-opacity="0.2" stroke-width="100"
+                                stroke-linecap="round"></path>
+                            <defs>
+                                <linearGradient id="paint0_linear_237_14" x1="97.0176" y1="296.491" x2="710.018"
+                                    y2="2.99105" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="white"></stop>
+                                    <stop offset="1" stop-color="white" stop-opacity="0.3"></stop>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        <div class="slider_cards">
+                            <div class="slider_card">
+                                <div>
+                                    <span>36</span>
+                                    <span>часов</span>
                                 </div>
+                                <p>и вы видите релевантных кандидатов.</p>
                             </div>
-                        </div>
-                        <div class="col-lg-2 col-md-6 col-sm-12 col7">
-                            <div class="advantage-box">
-                                <div class="advantage-box-content">
-                                    <i class="fa-solid fa-cloud"></i>
-                                    <span>Защита <br>от погоды</span>
+                            <div class="slider_card">
+                                <div>
+                                    <span>36</span>
+                                    <span>часов</span>
                                 </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-6 col-sm-12 col7">
-                            <div class="advantage-box">
-                                <div class="advantage-box-content">
-                                    <i class="fa-solid fa-house"></i>
-                                    <span>Современный <br> дизайн</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-6 col-sm-12 col7">
-                            <div class="advantage-box enginering">
-                                <div class="advantage-box-content">
-                                    <i class="fa-solid fa-crop-simple"></i>
-                                    <span>Закалённое <br> стекло</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-6 col-sm-12 col7">
-                            <div class="advantage-box">
-                                <div class="advantage-box-content">
-                                    <i class="fa-solid fa-stopwatch"></i>
-                                    <span>Быстрый <br>монтаж</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-2 col-md-6 col-sm-12 col7">
-                            <div class="advantage-box">
-                                <div class="advantage-box-content">
-                                    <i class="fa-solid fa-volume-off"></i>
-                                    <span>Тихое <br>открытие</span>
-                                </div>
+                                <p>и вы видите релевантных кандидатов.</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="about" data-aos="fade-up" data-aos-duration="1000">
+        <section id="advantages">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <span class="turned2">О нас</span>
-                    </div>
-                    <div class="col-md-1 p-0">
-                        <span class="turned">О нас</span>
-                    </div>
-                    <a href="https://youtu.be/Ee-jaAhPHwU" data-fancybox="gallery" class="p-0 col-md-5 about-video">
-                        <img src="/img/room.png" class="video-wrapper" alt="О нас">
-                        <div class="mainplay">
-                            <div class="play-button play">
-                                <img class="play-black"
-                                    src="/img/play-icon-graphic-design-projects-260nw-1700043421__1_-removebg-preview.png"
-                                    alt="THYSSEN play-btn">
-                            </div>
-                            <div class="big-circ play">
-                                <img src="/img/cevre.png" alt="THYSSEN">
-                            </div>
-                            <div class="small-circ play">
-                                <img src="/img/cevre2.png" alt="THYSSEN">
-                            </div>
-                        </div>
-                    </a>
-                    <div class="col-md-5">
-                        <div class="about-right-side">
-                            <img src="/img/terrace.png" alt="THYSSEN haqqımızda">
-                            <div class="about-text">
-                                <h3 class="horizantal-heading">О нас</h3>
-                                <div class="horizantal-paragraph">
-                                    <p class="horizantal-paragraph-typed-text">Мы являемся производителями безрамного
-                                        остекления для террас. Наши решения позволяют создать уютное и защищённое
-                                        пространство, сохраняя при этом панорамный вид и эстетику. Используем
-                                        качественные материалы и современные технологии для долговечной и удобной
-                                        эксплуатации.
-                                    </p>
-                                </div>
-                                <a href="/about/">Читать далее</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="services">
-            <div class="container">
-                <h2 class="sec_title">
-                    Услуги
+                <h2 class="new_sec">
+                    Потратили часы на поиск, но кандидатов нет?
                 </h2>
-                <div class="service_cards py-5">
-                    <div class="card__bx" style="--clr: #7aa6e3">
-                        <div class="card__data">
-                            <div class="card__icon">
-                                <i class="fa-solid fa-hammer"></i>
-                            </div>
-                            <div class="card__content">
-                                <h3>Установка</h3>
-                                <p>Uстановка выполняется быстро и качественно, обеспечивая долговечность и надежность
-                                    конструкции.</p>
-                                <a href="#">Читать далее</a>
-                            </div>
-                        </div>
+                <div class="notes">
+                    <!-- Row 1: 4 kart -->
+                    <div class="row">
+                        <div class="note green">Mükəmməl nəticə üçün motivasiya vacibdir.</div>
+                        <div class="note teal">Bəzən bir addım geri — iki addım irəlidir.</div>
+                        <div class="note lightgreen">Səbr, səni zirvəyə aparacaq gücdür.</div>
+                        <div class="note darkgreen">Hər səhv, bir təcrübə deməkdir.</div>
                     </div>
-                    <div class="card__bx" style="--clr: #7aa6e3">
-                        <div class="card__data">
-                            <div class="card__icon">
-                                <i class="fa-solid fa-money-bills"></i>
-                            </div>
-                            <div class="card__content">
-                                <h3>Распродажа</h3>
-                                <p>Распродажа — отличная возможность купить качественные безрамные системы по выгодной
-                                    цене.</p>
-                                <a href="#">Читать далее</a>
-                            </div>
-                        </div>
+
+                    <!-- Row 2: 3 kart -->
+                    <div class="row">
+                        <div class="note green">Öz yolunu özün cız.</div>
+                        <div class="note teal">Dəyişiklik, cəsarət tələb edir.</div>
+                        <div class="note lightgreen">Kiçik addımlar böyük nəticələr doğurur.</div>
                     </div>
-                    <div class="card__bx" style="--clr: #7aa6e3">
-                        <div class="card__data">
-                            <div class="card__icon">
-                                <i class="fa-solid fa-truck"></i>
-                            </div>
-                            <div class="card__content">
-                                <h3>Доставка</h3>
-                                <p>Доставка осуществляется быстро и надежно прямо до вашего дома.</p>
-                                <a href="#">Читать далее</a>
-                            </div>
-                        </div>
+
+                    <!-- Row 3: 4 kart -->
+                    <div class="row">
+                        <div class="note darkgreen">Motivasiya sabahın uğurudur.</div>
+                        <div class="note green">Daim öyrən, daim inkişaf et.</div>
+                        <div class="note teal">Məqsəd varsa, yol da tapılar.</div>
+                        <div class="note lightgreen">Uğur səbrin mükafatıdır.</div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="products">
+        <section id="agent">
             <div class="container">
-                <h2 class="sec_title">Продукция</h2>
-                <div class="swiper swiper_products pt-4">
-                    <div class="swiper-wrapper">
-                        <div class="swiper-slide">
-                            <div class="product-card">
-                                <div class="product-img">
-                                    <img src="/img/glassslider1.jpg" alt="Terrace Product">
-                                </div>
-                                <div class="product-content">
-                                    <h3 class="product-title">Wooden Lounge Chair</h3>
-                                    <p class="product-price">$149.00</p>
-                                    <div class="product-buttons">
-                                        <button class="btn view">Видеть</button>
-                                        <button class="btn cart">Читать далее</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-card">
-                                <div class="product-img">
-                                    <img src="/img/glassslider1.jpg" alt="Terrace Product">
-                                </div>
-                                <div class="product-content">
-                                    <h3 class="product-title">Wooden Lounge Chair</h3>
-                                    <p class="product-price">$149.00</p>
-                                    <div class="product-buttons">
-                                        <button class="btn view">Видеть</button>
-                                        <button class="btn cart">Читать далее</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-card">
-                                <div class="product-img">
-                                    <img src="/img/glassslider1.jpg" alt="Terrace Product">
-                                </div>
-                                <div class="product-content">
-                                    <h3 class="product-title">Wooden Lounge Chair</h3>
-                                    <p class="product-price">$149.00</p>
-                                    <div class="product-buttons">
-                                        <button class="btn view">Видеть</button>
-                                        <button class="btn cart">Читать далее</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-card">
-                                <div class="product-img">
-                                    <img src="/img/glassslider1.jpg" alt="Terrace Product">
-                                </div>
-                                <div class="product-content">
-                                    <h3 class="product-title">Wooden Lounge Chair</h3>
-                                    <p class="product-price">$149.00</p>
-                                    <div class="product-buttons">
-                                        <button class="btn view">Видеть</button>
-                                        <button class="btn cart">Читать далее</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="product-card">
-                                <div class="product-img">
-                                    <img src="/img/glassslider1.jpg" alt="Terrace Product">
-                                </div>
-                                <div class="product-content">
-                                    <h3 class="product-title">Wooden Lounge Chair</h3>
-                                    <p class="product-price">$149.00</p>
-                                    <div class="product-buttons">
-                                        <button class="btn view">Видеть</button>
-                                        <button class="btn cart">Читать далее</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="dealer-section">
-            <div class="dealer-text">
-                <h2>Стать официальным дилером</h2>
-                <p>
-                    Представляйте наш бренд в своем регионе и выведите свои продажи на новый уровень. Станьте нашим
-                    партнером и получите эксклюзивные возможности.
+                <h2 class="new_sec">
+                    Рекрутинговое агентство ZenStaff
+                </h2>
+                <p class="new_secp">
+                    ZenStaff – это не просто подбор сотрудников, это <span
+                        style="color: #075E54; font-weight: 600;">рост вашего бизнеса</span> с правильными людьми.
+                    <svg xmlns="http://www.w3.org/2000/svg" width="186" height="12" viewBox="0 0 186 12" fill="none">
+                        <path
+                            d="M1.98242 10.3726C25.9758 7.68801 50.0433 4.94309 74.2401 3.15734C86.3535 2.26337 98.5061 1.78046 110.691 1.62979C112.377 1.60895 117.174 1.13219 119.073 1.62979C121.393 2.238 114.408 2.83348 111.981 3.22235C108.555 3.77122 104.232 5.30114 101.169 6.40746C97.2817 7.81204 89.2045 11.5691 98.4914 10.0476C126.668 5.43117 156.021 3.44762 184.982 2.18231"
+                            stroke="#075E54" stroke-width="2" stroke-linecap="round"
+                            stroke-dasharray="236.42698669433594" style="stroke-dashoffset: 0px;"></path>
+                    </svg>
                 </p>
-                <a href="#form" class="btn">Сотрудничать</a>
-            </div>
-
-            <div class="dealer-image">
-                <!-- Background image is already handled in CSS -->
-            </div>
-        </section>
-
-        <section id="projects">
-            <div class="container">
-                <h2 class="sec_title">
-                    Проекты
-                </h2>
-                <div class="options pt-4">
-                    <div class="option active" style="--optionBackground:url(/img/glassslider1.jpg);">
-                        <div class="shadow"></div>
-                        <div class="label">
-                            <div class="icon">
-                                <img width="100%" src="/img/thynewlogo2.png" alt="">
-                            </div>
-                            <div class="info">
-                                <div class="main">Blonkisoaz</div>
-                                <div class="sub">Omuke trughte a otufta</div>
-                            </div>
-                        </div>
+                <div class="parent">
+                    <div class="div1">
+                        <span>Закрываем</span>
+                        <h3><span>87</span>%</h3>
+                        <span>вакансий в срок</span>
                     </div>
-                    <div class="option" style="--optionBackground:url(/img/glassslider1.jpg);">
-                        <div class="shadow"></div>
-                        <div class="label">
-                            <div class="icon">
-                                <img width="100%" src="/img/thynewlogo2.png" alt="">
-                            </div>
-                            <div class="info">
-                                <div class="main">Oretemauw</div>
-                                <div class="sub">Omuke trughte a otufta</div>
-                            </div>
-                        </div>
+                    <div class="div2">
+                        <span>Закрываем</span>
+                        <h3><span>87</span>%</h3>
+                        <span>вакансий в срок</span>
                     </div>
-                    <div class="option" style="--optionBackground:url(/img/glassslider1.jpg);">
-                        <div class="shadow"></div>
-                        <div class="label">
-                            <div class="icon">
-                                <img width="100%" src="/img/thynewlogo2.png" alt="">
-                            </div>
-                            <div class="info">
-                                <div class="main">Iteresuselle</div>
-                                <div class="sub">Omuke trughte a otufta</div>
-                            </div>
-                        </div>
+                    <div class="div3">
+                        <span>У нас есть своя проверенная база сильных специалистов</span>
+                        <h3>1 млн +</h3>
                     </div>
-                    <div class="option" style="--optionBackground:url(/img/glassslider1.jpg);">
-                        <div class="shadow"></div>
-                        <div class="label">
-                            <div class="icon">
-                                <img width="100%" src="/img/thynewlogo2.png" alt="">
-                            </div>
-                            <div class="info">
-                                <div class="main">Idiefe</div>
-                                <div class="sub">Omuke trughte a otufta</div>
-                            </div>
-                        </div>
+                    <div class="div4">
+                        <span>У нас есть своя проверенная база сильных специалистов</span>
+                        <h3><span>87</span>%</h3>
+                        <span>вакансий в срок</span>
                     </div>
-                    <div class="option" style="--optionBackground:url(/img/glassslider1.jpg);">
-                        <div class="shadow"></div>
-                        <div class="label">
-                            <div class="icon">
-                                <img width="100%" src="/img/thynewlogo2.png" alt="">
-                            </div>
-                            <div class="info">
-                                <div class="main">Inatethi</div>
-                                <div class="sub">Omuke trughte a otufta</div>
-                            </div>
-                        </div>
+                    <div class="div5">
+                        <span class="position-relative">Все говорят про кадровый голод в 2025?</span>
+                        <h2>Мы не говорим — мы находим.</h2>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section id="blogs">
+        <section id="contactus">
             <div class="container">
-                <h2 class="sec_title">Блоги</h2>
-                <div class="row gy-3 pt-4">
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <a href="https://www.hilalelektrik.az/layihlr/106-gazelli-group-mhdud-msuliyytli-cmiyyti.html">
-                            <div class="projectWrap">
-                                <div class="inner">
-                                    <div class="project">
-                                        <div class="innerWrap">
-                                            <div class="image"
-                                                style="background-image:url(https://hilalelektrik.az/uploads/posts/2024-07/fabrika.png);">
-                                            </div>
-                                            <div class="metaWrap">
-                                                <div class="meta">
-                                                    <h5>Почему безрамное остекление — лучший выбор для вашей террасы?
-                                                    </h5>
-                                                    <p class="label">Блоги</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <a href="https://www.hilalelektrik.az/layihlr/106-gazelli-group-mhdud-msuliyytli-cmiyyti.html">
-                            <div class="projectWrap">
-                                <div class="inner">
-                                    <div class="project">
-                                        <div class="innerWrap">
-                                            <div class="image"
-                                                style="background-image:url(https://hilalelektrik.az/uploads/posts/2024-07/fabrika.png);">
-                                            </div>
-                                            <div class="metaWrap">
-                                                <div class="meta">
-                                                    <h5>5 преимуществ безрамных систем остекления, о которых вы не знали
-                                                    </h5>
-                                                    <p class="label">Блоги</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-12">
-                        <a href="https://www.hilalelektrik.az/layihlr/106-gazelli-group-mhdud-msuliyytli-cmiyyti.html">
-                            <div class="projectWrap">
-                                <div class="inner">
-                                    <div class="project">
-                                        <div class="innerWrap">
-                                            <div class="image"
-                                                style="background-image:url(https://hilalelektrik.az/uploads/posts/2024-07/fabrika.png);">
-                                            </div>
-                                            <div class="metaWrap">
-                                                <div class="meta">
-                                                    <h5>Как ухаживать за безрамным остеклением: советы и лайфхаки</h5>
-                                                    <p class="label">Блоги</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
+                <div class="contact_content">
+                    <h2>Вы смотрите записи собеседований и сразу <span style="color: #4f680a;">оцениваете реального
+                            человека</span>, а не интерпретации
+                        рекрутера</h2>
+                    <p class="position-relative">Конкуренты так не делают — им выгодно «продавать» больше кандидатов за
+                        %, а <span style="color: #4f680a;">мы работаем за фикс и
+                            помогаем экономить ваш ФОТ.</span>
 
-        <section class="cta-section">
-            <div class="cta-container container">
-                <!-- Sol hissə: CTA mətn -->
-                <div class="cta-text">
-                    <h2>Связаться с нами</h2>
-                    <p>
-                        Хотите стать официальным дилером? Заполните форму ниже, и мы свяжемся с вами в течение 24 часов.
+                        <svg xmlns="http://www.w3.org/2000/svg" width="168" height="4" viewBox="0 0 168 4" fill="none">
+                            <path
+                                d="M1.62305 2.28516C9.4179 1.94677 17.1202 2.38182 24.8593 2.44318C36.4931 2.53544 48.0807 2.2856 59.7554 1.98342C71.1087 1.68955 82.3175 1.71775 93.5433 2.13933C100.836 2.41319 108.222 2.00482 115.606 1.76223C120.08 1.61523 124.043 2.14812 128.501 2.17804C138.062 2.24221 147.554 2.3582 157.162 1.80772C159.691 1.66283 165.415 0.843723 166.852 2.15617"
+                                stroke="#FF5833" stroke-width="2" stroke-linecap="round"
+                                stroke-dasharray="165.42384338378906" style="stroke-dashoffset: 0px;"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="103" height="80" viewBox="0 0 103 80"
+                            fill="none">
+                            <path
+                                d="M72.2225 1.00001L72.4255 1.00001C81.7208 0.999604 90.6756 0.999218 96.7883 8.58513C106.161 20.2167 101.962 37.7482 91.5744 47.4634C91.5098 47.5238 91.4453 47.5839 91.381 47.6437M91.381 47.6437C87.9152 50.8662 84.9316 53.0985 79.975 53.8442C76.593 54.3531 73.6755 54.3154 71.2266 51.8671C66.5178 47.1592 68.7904 40.955 74.9173 38.6021C80.9306 36.2928 87.7775 40.0077 90.4223 45.2885C90.8164 46.0754 91.135 46.8616 91.381 47.6437ZM91.381 47.6437C93.4271 54.1471 90.4591 60.3725 84.2125 64.467C68.7372 74.6106 48.1192 78.6053 29.5742 74.263C22.1251 72.5187 14.5067 69.8584 7.60566 66.7138C5.85409 65.9156 4.64132 65.1883 3 64.4329M6.5 78.918C6 75.918 6.14131 76.3186 5.58559 74.085C5.06632 71.9979 4.50597 70.0545 3.50298 68.1599C2.72002 66.681 1.93151 65.1985 1.02456 63.7877C0.85993 63.5316 1.56892 63.5893 1.78575 63.5563C4.0186 63.2157 6.25869 63.0626 8.47201 62.5819C11.5982 61.903 14.8723 61.2992 17.8133 60"
+                                stroke="#FF5833" stroke-width="2" stroke-linecap="round"
+                                stroke-dasharray="269.05645751953125" style="stroke-dashoffset: 0px;"></path>
+                        </svg>
                     </p>
-                    <ul class="benefits">
-                        <li>Множество довольных клиентов</li>
-                        <li>Эксклюзивные ценовые предложения</li>
-                        <li>Официальный партнёрский договор</li>
-                        <li>Техническая и маркетинговая поддержка</li>
-                    </ul>
+                    <a class="themebtn mt-3" href="#">Оставить заявку</a>
                 </div>
-
-                <!-- Sağ hissə: Form -->
-                <form class="cta-form">
-                    <input type="text" placeholder="Имя и Фамилия" required>
-                    <input type="email" placeholder="Адрес электронной почты" required>
-                    <input type="tel" placeholder="Номер телефона" required>
-                    <textarea placeholder="Краткое сообщение..." rows="4" required></textarea>
-                    <button type="submit">Отправить заявку</button>
-                </form>
             </div>
         </section>
     </main>
 
-    <footer class="site-footer">
-        <div class="footer-container container">
-
-            <!-- Логотип и краткое описание -->
-            <div class="footer-logo">
-                <img src="/img/thywhitelogo.png" alt="Логотип" />
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatibus maxime similique laudantium
-                    sint. Aliquid voluptatum blanditiis aspernatur qui ipsum labore doloremque sapiente obcaecati, modi
-                    voluptatem doloribus magnam quod molestiae quia!
-                </p>
-                <a href="#diler" class="btn-footer">Стать дилером</a>
-            </div>
-
-            <!-- Навигация -->
-            <div class="footer-nav">
-                <h4>Навигация</h4>
-                <ul>
-                    <li><a href="#">Главная</a></li>
-                    <li><a href="#">О нас</a></li>
-                    <li><a href="#">Продукты</a></li>
-                    <li><a href="#">Стать дилером</a></li>
-                    <li><a href="#">Услуги</a></li>
-                    <li><a href="#">Проекты</a></li>
-                    <li><a href="#">Контакты</a></li>
-                </ul>
-            </div>
-
-            <!-- Социальные сети -->
-            <div class="footer-social">
-                <h4>Следите за нами</h4>
-                <div class="social-icons">
-                    <!-- From Uiverse.io by aadium -->
-                    <div class="social-buttons">
-                        <a href="#" class="social-button github">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                                <path
-                                    d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7 .9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z" />
-                            </svg>
-                        </a>
-                        <a href="#" class="social-button linkedin">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 496 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                                <path
-                                    d="M248 8C111 8 0 119 0 256S111 504 248 504 496 393 496 256 385 8 248 8zM363 176.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7 .2-.7 .3-3.1-1.2-4.4s-3.6-.8-5.1-.5q-3.3 .7-104.6 69.1-14.8 10.2-26.9 9.9c-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3q.8-6.7 18.5-13.7 108.4-47.2 144.6-62.3c68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6 .5 9.6 2.9a10.5 10.5 0 0 1 3.5 6.7A43.8 43.8 0 0 1 363 176.7z" />
-                            </svg>
-                        </a>
-                        <a href="#" class="social-button facebook">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                                <path
-                                    d="M164.9 24.6c-7.7-18.6-28-28.5-47.4-23.2l-88 24C12.1 30.2 0 46 0 64C0 311.4 200.6 512 448 512c18 0 33.8-12.1 38.6-29.5l24-88c5.3-19.4-4.6-39.7-23.2-47.4l-96-40c-16.3-6.8-35.2-2.1-46.3 11.6L304.7 368C234.3 334.7 177.3 277.7 144 207.3L193.3 167c13.7-11.2 18.4-30 11.6-46.3l-40-96z" />
-                            </svg>
-                        </a>
-                        <a href="#" class="social-button mail">
-                            <svg xmlns="http://www.w3.org/2000/svg"
-                                viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
-                                <path
-                                    d="M64 112c-8.8 0-16 7.2-16 16l0 22.1L220.5 291.7c20.7 17 50.4 17 71.1 0L464 150.1l0-22.1c0-8.8-7.2-16-16-16L64 112zM48 212.2L48 384c0 8.8 7.2 16 16 16l384 0c8.8 0 16-7.2 16-16l0-171.8L322 328.8c-38.4 31.5-93.7 31.5-132 0L48 212.2zM0 128C0 92.7 28.7 64 64 64l384 0c35.3 0 64 28.7 64 64l0 256c0 35.3-28.7 64-64 64L64 448c-35.3 0-64-28.7-64-64L0 128z" />
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Нижняя часть -->
-        <div class="footer-bottom">
-            <p>© 2025 Thyssen Glass. Все права защищены.</p>
-            <p>Сайт разработан <a href="http://jeywastudio.com/" target="_blank">Jeywa Studio</a></p>
-        </div>
+    <footer>
     </footer>
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="/js/slick.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>

@@ -130,18 +130,6 @@ gsap.registerPlugin(ScrollTrigger);
         scrollTrigger: { trigger: "#slider", start: "top 85%", once: true }
     });
 
-    // Slider photo parallax on scroll
-    gsap.to(".sliderphoto", {
-        y: () => innerHeight * 0.08,
-        ease: "none",
-        scrollTrigger: {
-            trigger: "#slider",
-            start: "top bottom",
-            end: "bottom top",
-            scrub: 0.8
-        }
-    });
-
     // slider_cards pop in
     gsap.from(".slider_card", {
         y: 20, opacity: 0, scale: 0.96, stagger: 0.12, duration: 0.6, ease: "power2.out",

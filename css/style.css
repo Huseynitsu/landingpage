@@ -509,7 +509,7 @@ header nav ul a:hover::after {
 }
 
 .contact_content h2 {
-    font-size: 40px;
+    font-size: 30px;
     font-weight: 900;
 }
 
@@ -523,7 +523,7 @@ header nav ul a:hover::after {
 .contact_content p svg:first-of-type {
     position: absolute;
     top: 100%;
-    right: 122px;
+    right: 214px;
 }
 
 .contact_content p svg:nth-of-type(2) {

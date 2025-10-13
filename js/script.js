@@ -321,6 +321,102 @@ gsap.registerPlugin(ScrollTrigger);
         }
     });
 
+    /* ✨ 9) Investion Section Animation ✨ */
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Başlıq (yuxarıdan aşağıya çıxır)
+    gsap.from("#investion h2.new_sec", {
+        y: -30,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: "#investion h2.new_sec",
+            start: "top 85%",
+            once: true
+        }
+    });
+
+    // Kartların ardıcıl və yumşaq çıxışı
+    gsap.from("#investion .invcard", {
+        y: 40,
+        opacity: 0,
+        scale: 0.96,
+        stagger: 0.15,
+        duration: 0.8,
+        ease: "back.out(1.6)",
+        scrollTrigger: {
+            trigger: "#investion .parentinv",
+            start: "top 85%",
+            once: true
+        }
+    });
+
+    // Hover effekti — kartın üzərinə gələndə bir az qalxır
+    document.querySelectorAll("#investion .invcard").forEach(card => {
+        card.addEventListener("mouseenter", () => {
+            gsap.to(card, { scale: 1.03, y: -6, boxShadow: "0 12px 30px rgba(7,94,84,0.15)", duration: 0.25, ease: "power2.out" });
+        });
+        card.addEventListener("mouseleave", () => {
+            gsap.to(card, { scale: 1, y: 0, boxShadow: "0 4px 12px rgba(0,0,0,0.06)", duration: 0.3, ease: "power2.out" });
+        });
+    });
+
+    /* --- RESULTS Bölməsi --- */
+    (function () {
+        const resultCards = gsap.utils.toArray("#results .result_card");
+        resultCards.forEach((card) => {
+            const circleSpans = card.querySelectorAll(".circle span");
+            if (circleSpans.length) {
+                circleSpans.forEach((span, i) => {
+                    gsap.fromTo(
+                        span,
+                        { scale: 0, opacity: 0 },
+                        {
+                            scale: 1,
+                            opacity: 1,
+                            delay: i * 0.1,
+                            duration: 0.5,
+                            ease: "back.out(1.7)",
+                            scrollTrigger: {
+                                trigger: card,
+                                start: "top 85%",
+                                toggleActions: "play none none reverse",
+                            },
+                        }
+                    );
+                });
+            }
+
+            gsap.from(card.querySelector(".result_content"), {
+                x: 50,
+                opacity: 0,
+                duration: 0.8,
+                ease: "power2.out",
+                scrollTrigger: {
+                    trigger: card,
+                    start: "top 85%",
+                    toggleActions: "play none none reverse",
+                },
+            });
+
+            const svg = card.querySelector("svg");
+            if (svg) {
+                gsap.from(svg, {
+                    y: 20,
+                    opacity: 0,
+                    duration: 0.6,
+                    ease: "power2.out",
+                    scrollTrigger: {
+                        trigger: card,
+                        start: "top 85%",
+                        toggleActions: "play none none reverse",
+                    },
+                });
+            }
+        });
+    })();
+
 })(); // end IIFE
 
 // Make ScrollTrigger available for use in GSAP animations

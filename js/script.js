@@ -4,6 +4,17 @@ mainDiv.addEventListener('click', function () {
     this.classList.toggle('open');
 });
 
+document.querySelectorAll('.acc-header').forEach(header => {
+    header.addEventListener('click', () => {
+        const item = header.parentElement;
+        const allItems = document.querySelectorAll('.acc-item');
+        allItems.forEach(i => {
+            if (i !== item) i.classList.remove('active');
+        });
+        item.classList.toggle('active');
+    });
+});
+
 $(document).ready(function () {
     window.addEventListener("scroll", function () {
         const header = document.querySelector("header");
@@ -14,6 +25,11 @@ $(document).ready(function () {
         $("nav").toggleClass("navOpen");
         $("html, body").toggleClass("locked");
         $(".mobile_btn").toggleClass("opened");
+    });
+
+    var swiper2 = new Swiper(".swiper.feedback", {
+        slidesPerView: 3.5,
+        spaceBetween: 30,
     });
 });
 

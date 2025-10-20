@@ -433,6 +433,373 @@ gsap.registerPlugin(ScrollTrigger);
         });
     })();
 
+    /* ✨ 10) Keys / Cases Section Animation ✨ */
+    // Prepare SVGs for folder icons
+    prepareSVGDraw("#keys .folder svg path");
+
+    // Set initial state for folders to ensure they start hidden
+    gsap.set("#keys .folder", { opacity: 0, rotationX: -90, y: 50, scale: 0.9 });
+
+    // Animate section title
+    gsap.from("#keys h2", {
+        y: -20,
+        opacity: 0,
+        duration: 0.7,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: "#keys h2",
+            start: "top 85%",
+            once: true
+        }
+    });
+
+    // Animate folders with a "flip open" stagger effect
+    gsap.to("#keys .folder", {
+        rotationX: 0,
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        stagger: 0.2,
+        duration: 0.8,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+            trigger: "#keys .keys_card",
+            start: "top 85%",
+            once: true
+        }
+    });
+
+    // Draw folder SVGs on enter
+    ScrollTrigger.batch("#keys .folder svg path", {
+        onEnter: batch => {
+            batch.forEach(p => {
+                const len = +p.dataset.length || 150;
+                gsap.to(p, { strokeDashoffset: 0, duration: 1, ease: "power1.out" });
+            });
+        },
+        start: "top 80%",
+        once: true
+    });
+
+    // Micro hover for folders
+    document.querySelectorAll("#keys .folder").forEach(folder => {
+        folder.addEventListener("mouseenter", () => {
+            if (reduced) return;
+            gsap.to(folder, { rotationY: 5, scale: 1.02, duration: 0.3, ease: "power2.out" });
+        });
+        folder.addEventListener("mouseleave", () => {
+            gsap.to(folder, { rotationY: 0, scale: 1, duration: 0.3, ease: "power2.out" });
+        });
+    });
+
+    /* ✨ 11) Feedback / Reviews Section Animation ✨ */
+    // Animate title with color span
+    gsap.from("#feedback h2", {
+        y: -20,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: "#feedback h2",
+            start: "top 85%",
+            once: true
+        }
+    });
+
+    // Set initial state for feedback cards
+    gsap.set(".feedback_card", { opacity: 0, y: 30, scale: 0.95 });
+
+    // Stagger feedback cards (since it's a swiper, animate on container enter)
+    gsap.to(".feedback_card", {
+        y: 0,
+        opacity: 1,
+        scale: 1,
+        stagger: 0.15,
+        duration: 0.7,
+        ease: "back.out(1.6)",
+        scrollTrigger: {
+            trigger: "#feedback .swiper-wrapper",
+            start: "top 85%",
+            once: true
+        }
+    });
+
+    // Animate stars image and text inside cards
+    gsap.from(".feedback_card img, .feedback_card p", {
+        x: 20,
+        opacity: 0,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".feedback_card",
+            start: "top 90%",
+            once: true
+        }
+    });
+
+    // Hover lift for feedback cards
+    document.querySelectorAll(".feedback_card").forEach(card => {
+        card.addEventListener("mouseenter", () => {
+            if (reduced) return;
+            gsap.to(card, { y: -8, scale: 1.02, boxShadow: "0 10px 25px rgba(0,0,0,0.1)", duration: 0.25, ease: "power2.out" });
+        });
+        card.addEventListener("mouseleave", () => {
+            gsap.to(card, { y: 0, scale: 1, boxShadow: "0 4px 12px rgba(0,0,0,0.06)", duration: 0.25, ease: "power2.out" });
+        });
+    });
+
+    /* ✨ 12) Team Section Animation ✨ */
+    // Animate title
+    gsap.from("#team h2", {
+        y: -20,
+        opacity: 0,
+        duration: 0.7,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: "#team h2",
+            start: "top 85%",
+            once: true
+        }
+    });
+
+    // Set initial state for team cards
+    gsap.set("#team .team_card", { opacity: 0, x: -40, scale: 0.92 });
+
+    // Stagger team cards with profile pic focus
+    gsap.to("#team .team_card", {
+        x: 0,
+        opacity: 1,
+        scale: 1,
+        stagger: 0.18,
+        duration: 0.8,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+            trigger: "#team .team_cards",
+            start: "top 85%",
+            once: true
+        }
+    });
+
+    // Animate profile pics inside cards
+    gsap.from(".profile-pic img", {
+        scale: 1.2,
+        rotation: 5,
+        duration: 1,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".profile-pic",
+            start: "top 90%",
+            once: true
+        }
+    });
+
+    // Stagger social icons and button
+    gsap.from(".social-links-container svg, .button", {
+        y: 15,
+        opacity: 0,
+        stagger: 0.08,
+        duration: 0.5,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".bottom-bottom",
+            start: "top 85%",
+            once: true
+        }
+    });
+
+    // Hover effects for team cards and socials
+    document.querySelectorAll("#team .team_card").forEach(card => {
+        card.addEventListener("mouseenter", () => {
+            if (reduced) return;
+            gsap.to(card, { scale: 1.02, y: -5, duration: 0.3, ease: "power2.out" });
+        });
+        card.addEventListener("mouseleave", () => {
+            gsap.to(card, { scale: 1, y: 0, duration: 0.3, ease: "power2.out" });
+        });
+    });
+
+    document.querySelectorAll(".social-links-container svg").forEach(icon => {
+        icon.addEventListener("mouseenter", () => {
+            if (reduced) return;
+            gsap.to(icon, { scale: 1.2, rotation: 360, duration: 0.4, ease: "back.out(1.7)" });
+        });
+        icon.addEventListener("mouseleave", () => {
+            gsap.to(icon, { scale: 1, rotation: 0, duration: 0.3, ease: "power2.out" });
+        });
+    });
+
+    // Button hover
+    document.querySelectorAll(".button").forEach(btn => {
+        btn.addEventListener("mouseenter", () => {
+            if (reduced) return;
+            gsap.to(btn, { scale: 1.05, backgroundColor: "#A52A2A", duration: 0.2, ease: "power2.out" });
+        });
+        btn.addEventListener("mouseleave", () => {
+            gsap.to(btn, { scale: 1, backgroundColor: "initial", duration: 0.2, ease: "power2.out" });
+        });
+    });
+
+    /* ✨ 13) CTA Section Animation ✨ */
+    // Animate left side title and p
+    gsap.from("#cta .cta_left h2, #cta .cta_left p", {
+        y: 25,
+        opacity: 0,
+        stagger: 0.1,
+        duration: 0.7,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: "#cta .cta_left",
+            start: "top 85%",
+            once: true
+        }
+    });
+
+    // Animate form inputs and textarea stagger
+    gsap.from("#cta input, #cta textarea", {
+        y: 20,
+        opacity: 0,
+        stagger: 0.12,
+        duration: 0.6,
+        ease: "back.out(1.6)",
+        scrollTrigger: {
+            trigger: "#cta .cta_right",
+            start: "top 85%",
+            once: true
+        }
+    });
+
+    // Submit button pop
+    gsap.from("#cta .themebtn", {
+        scale: 0.8,
+        opacity: 0,
+        duration: 0.5,
+        ease: "back.out(1.7)",
+        delay: 0.3,
+        scrollTrigger: {
+            trigger: "#cta .themebtn",
+            start: "top 90%",
+            once: true
+        }
+    });
+
+    /* ✨ 14) Accordion / FAQ Section Animation ✨ */
+    // Animate title
+    gsap.from("#accordion h2", {
+        y: -20,
+        opacity: 0,
+        duration: 0.7,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: "#accordion h2",
+            start: "top 85%",
+            once: true
+        }
+    });
+
+    // Stagger accordion items entrance
+    gsap.from(".acc-item", {
+        y: 20,
+        opacity: 0,
+        stagger: 0.1,
+        duration: 0.6,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".custom-accordion",
+            start: "top 85%",
+            once: true
+        }
+    });
+
+    // Animate accordion open/close with GSAP (assuming custom accordion JS handles toggle class)
+    document.querySelectorAll(".acc-header").forEach(header => {
+        header.addEventListener("click", () => {
+            const body = header.nextElementSibling;
+            const icon = header.querySelector(".acc-icon svg");
+            if (body.style.display === "block") {
+                gsap.to(body, { height: 0, opacity: 0, duration: 0.4, ease: "power2.in" });
+                gsap.to(icon, { rotation: 0, duration: 0.3, ease: "power2.out" });
+                body.style.display = "none";
+            } else {
+                body.style.display = "block";
+                gsap.fromTo(body,
+                    { height: 0, opacity: 0 },
+                    { height: "auto", opacity: 1, duration: 0.4, ease: "power2.out" }
+                );
+                gsap.to(icon, { rotation: 180, duration: 0.3, ease: "power2.out" });
+            }
+        });
+    });
+
+    // Initial icon rotations if needed
+    gsap.set(".acc-icon svg", { rotation: 0 });
+
+    /* ✨ 15) Footer Animation ✨ */
+    // Subtle stagger for footer sections
+    gsap.from(".footer-section", {
+        y: 15,
+        opacity: 0,
+        stagger: 0.08,
+        duration: 0.6,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".footer_grids",
+            start: "top 95%",
+            once: true
+        }
+    });
+
+    // Set initial state for social icons
+    gsap.set(".social-media .social-icon", { opacity: 0, x: 10 });
+
+    // Animate social icons in footer
+    gsap.to(".social-media .social-icon", {
+        x: 0,
+        opacity: 1,
+        stagger: 0.05,
+        duration: 0.4,
+        ease: "power2.out",
+        scrollTrigger: {
+            trigger: ".footer-section:last-child",
+            start: "top 90%",
+            once: true
+        }
+    });
+
+    // Hover for footer links - use specific default color instead of initial
+    document.querySelectorAll(".footer-nav a").forEach(link => {
+        link.addEventListener("mouseenter", () => {
+            if (reduced) return;
+            gsap.to(link, { scale: 1.05, color: "#A52A2A", duration: 0.2, ease: "power2.out" });
+        });
+        link.addEventListener("mouseleave", () => {
+            gsap.to(link, { scale: 1, color: "#333", duration: 0.2, ease: "power2.out" }); // Assuming default is dark gray
+        });
+    });
+
+    document.querySelectorAll(".social-icon").forEach(link => {
+        link.addEventListener("mouseenter", () => {
+            if (reduced) return;
+            gsap.to(link, { scale: 1.1, duration: 0.2, ease: "power2.out" });
+        });
+        link.addEventListener("mouseleave", () => {
+            gsap.to(link, { scale: 1, duration: 0.2, ease: "power2.out" });
+        });
+    });
+
+    // Consultation button in footer
+    gsap.from(".consultation-btn", {
+        scale: 0.9,
+        opacity: 0,
+        duration: 0.5,
+        ease: "back.out(1.7)",
+        scrollTrigger: {
+            trigger: ".consultation-btn",
+            start: "top 90%",
+            once: true
+        }
+    });
+
 })(); // end IIFE
 
 // Make ScrollTrigger available for use in GSAP animations

@@ -4,14 +4,18 @@ mainDiv.addEventListener('click', function () {
     this.classList.toggle('open');
 });
 
-document.querySelectorAll('.acc-header').forEach(header => {
+const accHeaders = document.querySelectorAll('.acc-header');
+
+accHeaders.forEach(header => {
     header.addEventListener('click', () => {
         const item = header.parentElement;
-        const allItems = document.querySelectorAll('.acc-item');
-        allItems.forEach(i => {
-            if (i !== item) i.classList.remove('active');
-        });
-        item.classList.toggle('active');
+        const isActive = item.classList.contains('active');
+
+        // Bütün item-ləri bağla
+        document.querySelectorAll('.acc-item').forEach(i => i.classList.remove('active'));
+
+        // Əgər kliklənən artıq açıq deyilsə, onu aç
+        if (!isActive) item.classList.add('active');
     });
 });
 
@@ -624,56 +628,41 @@ gsap.registerPlugin(ScrollTrigger);
         }
     });
 
-    /* ✨ 14) Accordion / FAQ Section Animation ✨ */
-    // Animate title
-    gsap.from("#accordion h2", {
-        y: -20,
-        opacity: 0,
-        duration: 0.7,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: "#accordion h2",
-            start: "top 85%",
-            once: true
-        }
-    });
+    // /* ✨ 14) Accordion / FAQ Section Animation ✨ */
+    // gsap.from("#accordion h2", {
+    //     y: -20,
+    //     opacity: 0,
+    //     duration: 0.7,
+    //     ease: "power2.out",
+    //     scrollTrigger: {
+    //         trigger: "#accordion h2",
+    //         start: "top 85%",
+    //         once: true
+    //     }
+    // });
 
-    // Stagger accordion items entrance
-    gsap.from(".acc-item", {
-        y: 20,
-        opacity: 0,
-        stagger: 0.1,
-        duration: 0.6,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: ".custom-accordion",
-            start: "top 85%",
-            once: true
-        }
-    });
+    // // Animate accordion open/close with GSAP (assuming custom accordion JS handles toggle class)
+    // document.querySelectorAll(".acc-header").forEach(header => {
+    //     header.addEventListener("click", () => {
+    //         const body = header.nextElementSibling;
+    //         const icon = header.querySelector(".acc-icon svg");
+    //         if (body.style.display === "block") {
+    //             gsap.to(body, { height: 0, opacity: 0, duration: 0.4, ease: "power2.in" });
+    //             gsap.to(icon, { rotation: 0, duration: 0.3, ease: "power2.out" });
+    //             body.style.display = "none";
+    //         } else {
+    //             body.style.display = "block";
+    //             gsap.fromTo(body,
+    //                 { height: 0, opacity: 0 },
+    //                 { height: "auto", opacity: 1, duration: 0.4, ease: "power2.out" }
+    //             );
+    //             gsap.to(icon, { rotation: 180, duration: 0.3, ease: "power2.out" });
+    //         }
+    //     });
+    // });
 
-    // Animate accordion open/close with GSAP (assuming custom accordion JS handles toggle class)
-    document.querySelectorAll(".acc-header").forEach(header => {
-        header.addEventListener("click", () => {
-            const body = header.nextElementSibling;
-            const icon = header.querySelector(".acc-icon svg");
-            if (body.style.display === "block") {
-                gsap.to(body, { height: 0, opacity: 0, duration: 0.4, ease: "power2.in" });
-                gsap.to(icon, { rotation: 0, duration: 0.3, ease: "power2.out" });
-                body.style.display = "none";
-            } else {
-                body.style.display = "block";
-                gsap.fromTo(body,
-                    { height: 0, opacity: 0 },
-                    { height: "auto", opacity: 1, duration: 0.4, ease: "power2.out" }
-                );
-                gsap.to(icon, { rotation: 180, duration: 0.3, ease: "power2.out" });
-            }
-        });
-    });
-
-    // Initial icon rotations if needed
-    gsap.set(".acc-icon svg", { rotation: 0 });
+    // // Initial icon rotations if needed
+    // gsap.set(".acc-icon svg", { rotation: 0 });
 
     /* ✨ 15) Footer Animation ✨ */
     // Subtle stagger for footer sections

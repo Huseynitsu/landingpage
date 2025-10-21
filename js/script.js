@@ -433,65 +433,6 @@ gsap.registerPlugin(ScrollTrigger);
         });
     })();
 
-    /* ✨ 10) Keys / Cases Section Animation ✨ */
-    // Prepare SVGs for folder icons
-    prepareSVGDraw("#keys .folder svg path");
-
-    // Set initial state for folders to ensure they start hidden
-    gsap.set("#keys .folder", { opacity: 0, rotationX: -90, y: 50, scale: 0.9 });
-
-    // Animate section title
-    gsap.from("#keys h2", {
-        y: -20,
-        opacity: 0,
-        duration: 0.7,
-        ease: "power2.out",
-        scrollTrigger: {
-            trigger: "#keys h2",
-            start: "top 85%",
-            once: true
-        }
-    });
-
-    // Animate folders with a "flip open" stagger effect
-    gsap.to("#keys .folder", {
-        rotationX: 0,
-        y: 0,
-        opacity: 1,
-        scale: 1,
-        stagger: 0.2,
-        duration: 0.8,
-        ease: "back.out(1.7)",
-        scrollTrigger: {
-            trigger: "#keys .keys_card",
-            start: "top 85%",
-            once: true
-        }
-    });
-
-    // Draw folder SVGs on enter
-    ScrollTrigger.batch("#keys .folder svg path", {
-        onEnter: batch => {
-            batch.forEach(p => {
-                const len = +p.dataset.length || 150;
-                gsap.to(p, { strokeDashoffset: 0, duration: 1, ease: "power1.out" });
-            });
-        },
-        start: "top 80%",
-        once: true
-    });
-
-    // Micro hover for folders
-    document.querySelectorAll("#keys .folder").forEach(folder => {
-        folder.addEventListener("mouseenter", () => {
-            if (reduced) return;
-            gsap.to(folder, { rotationY: 5, scale: 1.02, duration: 0.3, ease: "power2.out" });
-        });
-        folder.addEventListener("mouseleave", () => {
-            gsap.to(folder, { rotationY: 0, scale: 1, duration: 0.3, ease: "power2.out" });
-        });
-    });
-
     /* ✨ 11) Feedback / Reviews Section Animation ✨ */
     // Animate title with color span
     gsap.from("#feedback h2", {
@@ -773,7 +714,7 @@ gsap.registerPlugin(ScrollTrigger);
             gsap.to(link, { scale: 1.05, color: "#A52A2A", duration: 0.2, ease: "power2.out" });
         });
         link.addEventListener("mouseleave", () => {
-            gsap.to(link, { scale: 1, color: "#333", duration: 0.2, ease: "power2.out" }); // Assuming default is dark gray
+            gsap.to(link, { scale: 1, color: "#ccc", duration: 0.2, ease: "power2.out" }); // Assuming default is dark gray
         });
     });
 
@@ -869,3 +810,148 @@ function initScroll(section, items, direction) {
             );
     });
 }
+
+// Safety: feature detect
+if (typeof gsap === 'undefined') {
+    console.error('GSAP не загружен.');
+} else {
+    gsap.registerPlugin(ScrollTrigger);
+
+    // Intro animation: badge & title
+    const introTl = gsap.timeline();
+    introTl.from('.brand-badge', { duration: 0.6, y: -12, opacity: 0, scale: 0.96, ease: 'power3.out' });
+    introTl.from('.section-wrap .title', { duration: 0.6, y: 6, opacity: 0, ease: 'power3.out' }, '-=0.45');
+    introTl.from('.subtitle', { duration: 0.5, y: 6, opacity: 0, ease: 'power3.out' }, '-=0.4');
+
+    // Cards reveal on scroll with stagger
+    gsap.utils.toArray('.case-card').forEach((card, i) => {
+        // basic entrance
+        gsap.from(card, {
+            scrollTrigger: {
+                trigger: card,
+                start: 'top 85%',
+                end: 'bottom 20%',
+                toggleActions: 'play none none reverse',
+            },
+            opacity: 0,
+            y: 20,
+            scale: 0.995,
+            duration: 0.7,
+            ease: 'power3.out',
+            delay: i * 0.12
+        });
+
+        // stagger list items inside
+        const items = card.querySelectorAll('.list li, .subsection ul li, .result-item');
+        gsap.from(items, {
+            scrollTrigger: {
+                trigger: card,
+                start: 'top 85%',
+            },
+            opacity: 0,
+            y: 8,
+            stagger: 0.08,
+            duration: 0.45,
+            ease: 'power2.out'
+        });
+
+        // subtle float effect on hover using pointer events
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const mx = (e.clientX - rect.left) / rect.width - 0.5;
+            const my = (e.clientY - rect.top) / rect.height - 0.5;
+            gsap.to(card, { duration: 0.6, rotationX: my * 4, rotationY: mx * -6, transformPerspective: 800, ease: 'power3.out' });
+        });
+        card.addEventListener('mouseleave', () => {
+            gsap.to(card, { duration: 0.6, rotationX: 0, rotationY: 0, ease: 'power3.out' });
+        });
+    });
+
+    // Make buttons micro-animated on hover
+    gsap.utils.toArray('.section-wrap .btn').forEach(btn => {
+        btn.addEventListener('mouseenter', () => gsap.to(btn, { scale: 1.03, boxShadow: '0 10px 30px rgba(165,42,42,0.18)', duration: 0.18 }));
+        btn.addEventListener('mouseleave', () => gsap.to(btn, { scale: 1, boxShadow: 'none', duration: 0.18 }));
+    });
+
+    // Reduce motion respect (prefers-reduced-motion)
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    if (mediaQuery.matches) {
+        ScrollTrigger.getAll().forEach(st => st.disable());
+        gsap.globalTimeline.timeScale(0.8);
+    }
+}
+
+const feedbackCards = document.querySelectorAll('.feedback_card p');
+const popup = document.getElementById('feedback_popup');
+const popupText = document.getElementById('popup_text');
+const closeBtn = document.querySelector('.popup_content .close');
+
+feedbackCards.forEach(card => {
+    card.addEventListener('click', () => {
+        popupText.textContent = card.textContent;
+        popup.style.display = 'flex';
+    });
+});
+
+closeBtn.addEventListener('click', () => {
+    popup.style.display = 'none';
+});
+
+popup.addEventListener('click', (e) => {
+    if (e.target === popup) popup.style.display = 'none';
+});
+
+(function () {
+    const buttons = document.querySelectorAll('.randevu');
+    const modal = document.getElementById('appointmentModal');
+    const close = modal.querySelector('.eye-modal__close');
+    const backdrop = modal.querySelector('.eye-modal__backdrop');
+    const firstInput = modal.querySelector('input, textarea, button');
+
+    function openModal() {
+        modal.classList.add('is-open');
+        modal.setAttribute('aria-hidden', 'false');
+        // задержка для доступности: после рендера — фокус
+        setTimeout(() => firstInput && firstInput.focus(), 50);
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal() {
+        modal.classList.remove('is-open');
+        modal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    // Bütün .randevu düymələrinə event listener əlavə et
+    buttons.forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            openModal();
+        });
+    });
+
+    close.addEventListener('click', closeModal);
+    backdrop.addEventListener('click', closeModal);
+    window.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+            closeModal();
+        }
+    });
+
+    // Formun göndərilməsinin imitasiya hissəsi
+    document.getElementById('eyeForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        const button = this.querySelector('.eye-btn');
+        const oldText = button.textContent;
+        button.disabled = true;
+        button.textContent = 'Отправка...';
+        setTimeout(() => {
+            button.textContent = 'Заявка отправлена ✓';
+            setTimeout(() => {
+                button.disabled = false;
+                button.textContent = oldText;
+                closeModal();
+            }, 1200);
+        }, 900);
+    });
+})();

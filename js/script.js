@@ -614,20 +614,6 @@ gsap.registerPlugin(ScrollTrigger);
         }
     });
 
-    // Submit button pop
-    gsap.from("#cta .themebtn", {
-        scale: 0.8,
-        opacity: 0,
-        duration: 0.5,
-        ease: "back.out(1.7)",
-        delay: 0.3,
-        scrollTrigger: {
-            trigger: "#cta .themebtn",
-            start: "top 90%",
-            once: true
-        }
-    });
-
     // /* ✨ 14) Accordion / FAQ Section Animation ✨ */
     // gsap.from("#accordion h2", {
     //     y: -20,

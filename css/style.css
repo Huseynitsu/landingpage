@@ -1861,6 +1861,20 @@ header nav ul a:hover::after {
     line-height: 1.33;
 }
 
+.cta_right button {
+    height: 50px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 10px;
+    border: 0px solid rgb(0, 0, 0);
+    background-color: rgb(255, 255, 255);
+    color: #000;
+    outline: none;
+    padding: 0 20px;
+    width: 100%;
+    line-height: 1.33;
+}
+
 .cta_right textarea {
     color: rgb(121, 120, 121);
     border: 0px solid rgb(0, 0, 0);
@@ -1877,7 +1891,7 @@ header nav ul a:hover::after {
     width: 100%;
 }
 
-.cta_right input[type="submit"]:hover {
+.cta_right button:hover {
     border: 1px solid #fff;
     color: #fff;
 }
